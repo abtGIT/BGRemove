@@ -21,8 +21,6 @@ def getTextOverlay(input_image):
     output[input_image>np.std(input_image)]=255 # same as removeColor
     output = cv2.cvtColor(output,cv2.COLOR_BGR2GRAY)
     output = keepROI(output)
-    cv2.imshow('output',output)
-    cv2.waitKey(0)
     return output
 
 def keepROI(image):
